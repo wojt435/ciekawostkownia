@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciekawostkownia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        input {
+            padding: 10px;
+            font-size: 1rem;
+            margin: 10px;
+            
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wprowadz liczbe</h1>
+    <input type="number" id="numberInput" placeholder="Wpisz liczbę" />
+    <button onclick="showText()">Zatwierdź</button>
+    <div id="result"></div>
+
+    <script>
+        const data = {
+            1: "Masz najlepsze poczucie humoru i czesto jak sie nie widzimy, to przypominam sobie twoj zart i ssie smieje sam do siebie",
+            2: "Robisz najbardziej kreatywne i najlepsze prezenty",
+            3: "Jestes przepiekna, nigdy nie widzialem piekniejszej osoby od ciebie",
+            4: "Przy tobie czuje sie najbardziej komfortowo i zawsze jak cos mnie trapi to wystarczy, ze jestes i to juz mi pomaga",
+            5: "Jestes chodzacym green flagiem, mysle, ze kazdy mezczyzna chcialby miec taka dziewczyne jak ty",
+            6: "Zawsze jak sie nie widzimy to strasznie za toba tesknie i odliczam czas do momentu kiedy sie zobaczymy",
+            7: "Jestes bardzo inteligentna, zawsze jak rozmawiamy to podziwiam to jak bardzo trafnie i madrze oceniasz rozne sytuacje",
+            8: "Masz wspanialy gust, wszystko co lubisz jest obiektywnie piekne i wartosciowe",
+            9: "Doceniasz i potrafisz cieszyc sie z malych rzeczy",
+            10: "Jestes bardzo wrazliwa i delikatna przez co czuje, ze moge porozmawiac z toba o wszystkim i ty mnie zrozumiesz",
+            11: "Jestes jedyna w swoim rodzaju, najbardziej unikatowa dziewczyna jest moja dziewczyna yeah",
+            12: "Masz przepiekne doleczki jak sie usmiechasz, moglbym patrzec na nie godzinami",
+            13: "Jestes przeslodka, czasem na prawde przesadzasz, ale szczerze to to uwielbiam",
+            14: "Po prostu kocham cie najbardziej na swiecie",
+            15: "Jestes moim ulubionym towarzyszem do odpoczwania, imprezowania, podrozowania, uprawiania sportu, uczenia sie",
+            16: "Kochasz zwierzeta i jak widzisz biedne zwierzatko to zawsze chcesz mu pomoc, co jest bardzo kochane",
+            17: "Jestes bardzo pozytywna, nawet jak jest trudny okres to szukasz rozwiazan, przez co sam czuje sie zawsze lepiej przy tobie",
+
+            
+        };
+        function showText() {
+            const number = document.getElementById("numberInput").value;
+            const resultDiv = document.getElementById("result");
+
+            if (data[number]) {
+                resultDiv.textContent = data[number];
+            } else {
+                resultDiv.textContent = "Brak przypisanego tekstu dla tej liczby.";
+            }
+        }
+    </script>
+    </body>
+    </html>
